@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "SYHUDView.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+}
+#pragma mark - Example
+- (IBAction)testClicked:(id)sender {
+    
+    
+//    [SYHUDView showToView:self.view text:@"Success" hide:2.0];
+    [SYHUDView showToView:self.view success:YES text:@"Success" hide:2.0];
+    [SYHUDView showToBottomView:self.view text:@"bottom Success" hide:2.0];
+    [SYHUDView showToView:self.view customImage:[UIImage imageNamed:@"nav_back_icon"] text:@"customImage" hide:2.0];
+    
+    SYHUDView *hud = [SYHUDView showToView:self.view];
+    [hud hide:YES afterDelay:2.0];
+
 }
 
 - (void)didReceiveMemoryWarning {
