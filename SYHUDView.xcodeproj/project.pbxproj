@@ -12,9 +12,6 @@
 		0291DEA01B8571E300F89982 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0291DE9F1B8571E300F89982 /* ViewController.m */; };
 		0291DEA31B8571E300F89982 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0291DEA11B8571E300F89982 /* Main.storyboard */; };
 		0291DEA51B8571E300F89982 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0291DEA41B8571E300F89982 /* Assets.xcassets */; };
-		0291DEA81B8571E300F89982 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0291DEA61B8571E300F89982 /* LaunchScreen.storyboard */; };
-		0291DEB31B8571E400F89982 /* SYHUDViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0291DEB21B8571E400F89982 /* SYHUDViewTests.m */; };
-		0291DEBE1B8571E400F89982 /* SYHUDViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0291DEBD1B8571E400F89982 /* SYHUDViewUITests.m */; };
 		0291DECE1B85732800F89982 /* SYHUDView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0291DECD1B85732800F89982 /* SYHUDView.m */; };
 		0291DEDA1B8575CE00F89982 /* hub_error.png in Resources */ = {isa = PBXBuildFile; fileRef = 0291DED11B8575CE00F89982 /* hub_error.png */; };
 		0291DEDB1B8575CE00F89982 /* hub_error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0291DED21B8575CE00F89982 /* hub_error@2x.png */; };
@@ -51,13 +48,10 @@
 		0291DE9F1B8571E300F89982 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0291DEA21B8571E300F89982 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0291DEA41B8571E300F89982 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0291DEA71B8571E300F89982 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0291DEA91B8571E300F89982 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0291DEAE1B8571E400F89982 /* SYHUDViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SYHUDViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0291DEB21B8571E400F89982 /* SYHUDViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYHUDViewTests.m; sourceTree = "<group>"; };
+		0291DEAE1B8571E400F89982 /* SYHUDViewTests.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SYHUDViewTests.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		0291DEB41B8571E400F89982 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0291DEB91B8571E400F89982 /* SYHUDViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SYHUDViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0291DEBD1B8571E400F89982 /* SYHUDViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYHUDViewUITests.m; sourceTree = "<group>"; };
+		0291DEB91B8571E400F89982 /* SYHUDViewUITests.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SYHUDViewUITests.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		0291DEBF1B8571E400F89982 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0291DECC1B85732800F89982 /* SYHUDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYHUDView.h; sourceTree = "<group>"; };
 		0291DECD1B85732800F89982 /* SYHUDView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYHUDView.m; sourceTree = "<group>"; };
@@ -114,8 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				0291DE951B8571E300F89982 /* SYHUDView.app */,
-				0291DEAE1B8571E400F89982 /* SYHUDViewTests.xctest */,
-				0291DEB91B8571E400F89982 /* SYHUDViewUITests.xctest */,
+				0291DEAE1B8571E400F89982 /* SYHUDViewTests.bundle */,
+				0291DEB91B8571E400F89982 /* SYHUDViewUITests.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,7 +124,6 @@
 				0291DE9F1B8571E300F89982 /* ViewController.m */,
 				0291DEA11B8571E300F89982 /* Main.storyboard */,
 				0291DEA41B8571E300F89982 /* Assets.xcassets */,
-				0291DEA61B8571E300F89982 /* LaunchScreen.storyboard */,
 				0291DE981B8571E300F89982 /* Supporting Files */,
 			);
 			path = SYHUDView;
@@ -148,7 +141,6 @@
 		0291DEB11B8571E400F89982 /* SYHUDViewTests */ = {
 			isa = PBXGroup;
 			children = (
-				0291DEB21B8571E400F89982 /* SYHUDViewTests.m */,
 				0291DEB41B8571E400F89982 /* Info.plist */,
 			);
 			path = SYHUDViewTests;
@@ -157,7 +149,6 @@
 		0291DEBC1B8571E400F89982 /* SYHUDViewUITests */ = {
 			isa = PBXGroup;
 			children = (
-				0291DEBD1B8571E400F89982 /* SYHUDViewUITests.m */,
 				0291DEBF1B8571E400F89982 /* Info.plist */,
 			);
 			path = SYHUDViewUITests;
@@ -256,8 +247,8 @@
 			);
 			name = SYHUDViewTests;
 			productName = SYHUDViewTests;
-			productReference = 0291DEAE1B8571E400F89982 /* SYHUDViewTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
+			productReference = 0291DEAE1B8571E400F89982 /* SYHUDViewTests.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
 		0291DEB81B8571E400F89982 /* SYHUDViewUITests */ = {
 			isa = PBXNativeTarget;
@@ -274,8 +265,8 @@
 			);
 			name = SYHUDViewUITests;
 			productName = SYHUDViewUITests;
-			productReference = 0291DEB91B8571E400F89982 /* SYHUDViewUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
+			productReference = 0291DEB91B8571E400F89982 /* SYHUDViewUITests.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -326,7 +317,6 @@
 			files = (
 				0291DEDA1B8575CE00F89982 /* hub_error.png in Resources */,
 				0291DEDF1B8575CE00F89982 /* nav_back_icon@3x.png in Resources */,
-				0291DEA81B8571E300F89982 /* LaunchScreen.storyboard in Resources */,
 				0291DEA51B8571E300F89982 /* Assets.xcassets in Resources */,
 				0291DEDB1B8575CE00F89982 /* hub_error@2x.png in Resources */,
 				0291DEA31B8571E300F89982 /* Main.storyboard in Resources */,
@@ -401,7 +391,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0291DEB31B8571E400F89982 /* SYHUDViewTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,7 +398,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0291DEBE1B8571E400F89982 /* SYHUDViewUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,14 +423,6 @@
 				0291DEA21B8571E300F89982 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		0291DEA61B8571E300F89982 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0291DEA71B8571E300F89982 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

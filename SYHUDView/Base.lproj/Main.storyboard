@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.17" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -18,31 +19,99 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGG-cK-BhR">
-                                <rect key="frame" x="24" y="84" width="552" height="35"/>
+                                <rect key="frame" x="20" y="124" width="560" height="35"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="DKI-h6-XYd"/>
                                 </constraints>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="ActivityIndicatorView(俗称菊花)">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="testClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bwM-Qk-DCw"/>
+                                    <action selector="indicatorView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TQQ-Gg-pvK"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XeJ-6f-Ofr">
+                                <rect key="frame" x="20" y="175" width="560" height="35"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="9kn-uz-oKe"/>
+                                </constraints>
+                                <state key="normal" title="自定义HUD图片显示">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="customImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8RK-Jk-IGP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iuc-Gw-RgS">
+                                <rect key="frame" x="20" y="224" width="560" height="35"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Xer-dd-9b5"/>
+                                </constraints>
+                                <state key="normal" title="纯文字">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="labelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dPP-fl-SqA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FiX-PM-bz1">
+                                <rect key="frame" x="20" y="273" width="560" height="35"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="i0n-vz-Lfz"/>
+                                </constraints>
+                                <state key="normal" title="操作已完成check">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="successImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gI2-ec-8Yb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MBProgressHUD 小小封装" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oA7-ij-ON5">
+                                <rect key="frame" x="20" y="64" width="560" height="20"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="WGG-cK-BhR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="08b-5I-m4q"/>
-                            <constraint firstItem="WGG-cK-BhR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="64" id="1g6-Z5-YKd"/>
+                            <constraint firstItem="XeJ-6f-Ofr" firstAttribute="top" secondItem="WGG-cK-BhR" secondAttribute="bottom" constant="16" id="8tW-vT-4rD"/>
+                            <constraint firstItem="iuc-Gw-RgS" firstAttribute="top" secondItem="XeJ-6f-Ofr" secondAttribute="bottom" constant="14" id="97t-GZ-pTg"/>
+                            <constraint firstItem="XeJ-6f-Ofr" firstAttribute="trailing" secondItem="iuc-Gw-RgS" secondAttribute="trailing" id="CUb-iV-gWQ"/>
+                            <constraint firstItem="XeJ-6f-Ofr" firstAttribute="leading" secondItem="WGG-cK-BhR" secondAttribute="leading" id="DUZ-tP-x9m"/>
+                            <constraint firstItem="oA7-ij-ON5" firstAttribute="trailing" secondItem="WGG-cK-BhR" secondAttribute="trailing" id="HXN-hR-wxC"/>
+                            <constraint firstItem="XeJ-6f-Ofr" firstAttribute="leading" secondItem="iuc-Gw-RgS" secondAttribute="leading" id="Hxv-I9-Okm"/>
+                            <constraint firstItem="XeJ-6f-Ofr" firstAttribute="width" secondItem="iuc-Gw-RgS" secondAttribute="width" id="JT1-E3-i1F"/>
+                            <constraint firstItem="iuc-Gw-RgS" firstAttribute="width" secondItem="FiX-PM-bz1" secondAttribute="width" id="Pg4-qx-8XZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WGG-cK-BhR" secondAttribute="trailing" constant="4" id="Pqj-gq-oPc"/>
+                            <constraint firstItem="WGG-cK-BhR" firstAttribute="top" secondItem="oA7-ij-ON5" secondAttribute="bottom" constant="40" id="SeB-Nr-iS6"/>
+                            <constraint firstItem="iuc-Gw-RgS" firstAttribute="height" secondItem="FiX-PM-bz1" secondAttribute="height" id="eJI-nt-xyq"/>
+                            <constraint firstItem="oA7-ij-ON5" firstAttribute="width" secondItem="WGG-cK-BhR" secondAttribute="width" id="f2H-fo-MvT"/>
+                            <constraint firstItem="oA7-ij-ON5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="gcb-jR-FZt"/>
+                            <constraint firstItem="iuc-Gw-RgS" firstAttribute="trailing" secondItem="FiX-PM-bz1" secondAttribute="trailing" id="hZE-8r-kZu"/>
+                            <constraint firstItem="XeJ-6f-Ofr" firstAttribute="height" secondItem="iuc-Gw-RgS" secondAttribute="height" id="ms8-ic-qEc"/>
+                            <constraint firstItem="oA7-ij-ON5" firstAttribute="leading" secondItem="WGG-cK-BhR" secondAttribute="leading" id="nU1-s0-eoN"/>
+                            <constraint firstItem="WGG-cK-BhR" firstAttribute="height" secondItem="XeJ-6f-Ofr" secondAttribute="height" id="rgD-b4-OGW"/>
+                            <constraint firstItem="WGG-cK-BhR" firstAttribute="width" secondItem="XeJ-6f-Ofr" secondAttribute="width" id="rzw-JS-IaV"/>
+                            <constraint firstItem="FiX-PM-bz1" firstAttribute="top" secondItem="iuc-Gw-RgS" secondAttribute="bottom" constant="14" id="ua9-iT-uNC"/>
+                            <constraint firstItem="iuc-Gw-RgS" firstAttribute="leading" secondItem="FiX-PM-bz1" secondAttribute="leading" id="vS8-10-cel"/>
+                            <constraint firstItem="XeJ-6f-Ofr" firstAttribute="trailing" secondItem="WGG-cK-BhR" secondAttribute="trailing" id="yQe-2L-f1c"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="299" y="390"/>
+            <point key="canvasLocation" x="146" y="58"/>
         </scene>
     </scenes>
 </document>

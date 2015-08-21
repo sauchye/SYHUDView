@@ -138,14 +138,6 @@
 //    return hud;
 //}
 
-
-
-#pragma mark - MBProgressHUDDelegate
-- (void)hudWasHidden:(MBProgressHUD *)hud {
-    // Remove HUD from screen when the HUD was hidded
-}
-
-
 /** 加载实心圆形进度条+文字提示 */
 //+ (SYHUDView *)showToDeterminateView:(UIView *)view{
 //}

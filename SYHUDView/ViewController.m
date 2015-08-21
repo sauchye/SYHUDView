@@ -20,17 +20,24 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 #pragma mark - Example
-- (IBAction)testClicked:(id)sender {
-    
-    
-//    [SYHUDView showToView:self.view text:@"Success" hide:2.0];
-    [SYHUDView showToView:self.view success:YES text:@"Success" hide:2.0];
-    [SYHUDView showToBottomView:self.view text:@"bottom Success" hide:2.0];
-    [SYHUDView showToView:self.view customImage:[UIImage imageNamed:@"nav_back_icon"] text:@"customImage" hide:2.0];
+- (IBAction)indicatorView:(id)sender {
     
     SYHUDView *hud = [SYHUDView showToView:self.view];
     [hud hide:YES afterDelay:2.0];
+}
+- (IBAction)customImage:(id)sender {
+    
+    [SYHUDView showToView:self.view customImage:[UIImage imageNamed:@"nav_back_icon"] text:@"customImage" hide:2.0];
 
+}
+- (IBAction)labelText:(id)sender {
+    
+    [SYHUDView showToBottomView:self.view text:@"bottom info" hide:2.0];
+    [SYHUDView showToView:self.view text:@"center info" hide:2.0];
+}
+- (IBAction)successImage:(id)sender {
+    [SYHUDView showToView:self.view success:YES text:@"Success" hide:2.0];
+    
 }
 
 - (void)didReceiveMemoryWarning {
