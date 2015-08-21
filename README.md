@@ -4,7 +4,9 @@ Based MBProgrssHUD Package, easy use.
 
 鉴于MBProgrssHUD在项目中的需求，所以基于MBProgrssHUD再次封装，用起来真特么的爽。
 
-![intro gif](https://github.com/sauchye/SYHUDView/blob/master/into.gif)
+
+
+![intro gif](https://github.com/sauchye/SYHUDView/blob/master/intro.gif)
 
 
 
@@ -34,21 +36,18 @@ Based MBProgrssHUD Package, easy use.
 
 		[SYHUDView showToView:self.view text:@"Success" hide:2.0];
 
-	
-
 		[SYHUDView showToView:self.view success:YES text:@"Success" hide:2.0];
 
-``` 
-	[SYHUDView showToBottomView:self.view text:@"bottom Success" hide:2.0];
+		[SYHUDView showToBottomView:self.view text:@"bottom Success" hide:2.0];
 
-	[SYHUDView showToView:self.view customImage:[UIImage imageNamed:@"nav_back_icon"] text:@"customImage" hide:2.0];
+		[SYHUDView showToView:self.view customImage:[UIImage imageNamed:@"nav_back_icon"] text:@"customImage" hide:2.0];
 
-	SYHUDView *hud = [SYHUDView showToView:self.view];
+		SYHUDView *hud = [SYHUDView showToView:self.view];
 
-	[hud hide:YES afterDelay:2.0]; 
-
-And has many not finished...
+		[hud hide:YES afterDelay:2.0]; 
 ```
+And has many not finished...
+
 
 - welcome to star, fork, pull request or issues.
 
