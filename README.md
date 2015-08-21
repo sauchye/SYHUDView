@@ -45,7 +45,8 @@ Based MBProgrssHUD Package, easy use.
 		SYHUDView *hud = [SYHUDView showToView:self.view];
 
 		[hud hide:YES afterDelay:2.0]; 
-```
+
+
 And has many not finished...
 
 
@@ -63,4 +64,4 @@ And has many not finished...
 
 ### License
 
-SYHudView is licensed under the MIT License.
+SYHUDView is licensed under the MIT License.
