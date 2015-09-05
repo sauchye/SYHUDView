@@ -13,9 +13,7 @@
 		0291DEA31B8571E300F89982 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0291DEA11B8571E300F89982 /* Main.storyboard */; };
 		0291DEA51B8571E300F89982 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0291DEA41B8571E300F89982 /* Assets.xcassets */; };
 		0291DECE1B85732800F89982 /* SYHUDView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0291DECD1B85732800F89982 /* SYHUDView.m */; };
-		0291DEDA1B8575CE00F89982 /* hub_error.png in Resources */ = {isa = PBXBuildFile; fileRef = 0291DED11B8575CE00F89982 /* hub_error.png */; };
 		0291DEDB1B8575CE00F89982 /* hub_error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0291DED21B8575CE00F89982 /* hub_error@2x.png */; };
-		0291DEDC1B8575CE00F89982 /* hub_success.png in Resources */ = {isa = PBXBuildFile; fileRef = 0291DED31B8575CE00F89982 /* hub_success.png */; };
 		0291DEDD1B8575CE00F89982 /* hub_success@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0291DED41B8575CE00F89982 /* hub_success@2x.png */; };
 		0291DEDE1B8575CE00F89982 /* nav_back_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0291DED61B8575CE00F89982 /* nav_back_icon@2x.png */; };
 		0291DEDF1B8575CE00F89982 /* nav_back_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0291DED71B8575CE00F89982 /* nav_back_icon@3x.png */; };
@@ -55,9 +53,7 @@
 		0291DEBF1B8571E400F89982 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0291DECC1B85732800F89982 /* SYHUDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYHUDView.h; sourceTree = "<group>"; };
 		0291DECD1B85732800F89982 /* SYHUDView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYHUDView.m; sourceTree = "<group>"; };
-		0291DED11B8575CE00F89982 /* hub_error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hub_error.png; sourceTree = "<group>"; };
 		0291DED21B8575CE00F89982 /* hub_error@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hub_error@2x.png"; sourceTree = "<group>"; };
-		0291DED31B8575CE00F89982 /* hub_success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hub_success.png; sourceTree = "<group>"; };
 		0291DED41B8575CE00F89982 /* hub_success@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hub_success@2x.png"; sourceTree = "<group>"; };
 		0291DED61B8575CE00F89982 /* nav_back_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_back_icon@2x.png"; sourceTree = "<group>"; };
 		0291DED71B8575CE00F89982 /* nav_back_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_back_icon@3x.png"; sourceTree = "<group>"; };
@@ -176,9 +172,7 @@
 		0291DED01B8575CE00F89982 /* HudView */ = {
 			isa = PBXGroup;
 			children = (
-				0291DED11B8575CE00F89982 /* hub_error.png */,
 				0291DED21B8575CE00F89982 /* hub_error@2x.png */,
-				0291DED31B8575CE00F89982 /* hub_success.png */,
 				0291DED41B8575CE00F89982 /* hub_success@2x.png */,
 			);
 			path = HudView;
@@ -315,12 +309,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0291DEDA1B8575CE00F89982 /* hub_error.png in Resources */,
 				0291DEDF1B8575CE00F89982 /* nav_back_icon@3x.png in Resources */,
 				0291DEA51B8571E300F89982 /* Assets.xcassets in Resources */,
 				0291DEDB1B8575CE00F89982 /* hub_error@2x.png in Resources */,
 				0291DEA31B8571E300F89982 /* Main.storyboard in Resources */,
-				0291DEDC1B8575CE00F89982 /* hub_success.png in Resources */,
 				0291DEDE1B8575CE00F89982 /* nav_back_icon@2x.png in Resources */,
 				0291DEDD1B8575CE00F89982 /* hub_success@2x.png in Resources */,
 			);

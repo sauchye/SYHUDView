@@ -47,7 +47,9 @@ Based MBProgrssHUD Package, easy use.
 		[hud hide:YES afterDelay:2.0]; 
 
 
+
 And has many not finished...
+
 
 
 - welcome to star, fork, pull request or issues.
@@ -59,9 +61,3 @@ And has many not finished...
 ### Libraries
 
 <a href="https://github.com/jdg/MBProgressHUD">MBProgressHUD</a>
-
-
-
-### License
-
-SYHUDView is licensed under the MIT License.
