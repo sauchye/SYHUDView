@@ -7,7 +7,10 @@
 //
 
 #import "ViewController.h"
-#import "SYHUDView.h"
+#import "SYProgressHUD.h"
+
+static CGFloat const delyedTime = 2.0;
+
 
 @interface ViewController ()
 
@@ -17,27 +20,42 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)hideHUD{
+    
+    [SYProgressHUD hide];
+    [SYProgressHUD showSuccessText:@"success"];
+
 }
 #pragma mark - Example
 - (IBAction)indicatorView:(id)sender {
+
     
-    SYHUDView *hud = [SYHUDView showToView:self.view];
-    [hud hide:YES afterDelay:2.0];
+    SYProgressHUD *hud =  [SYProgressHUD showToLoadingView:self.view];
+    [hud hide:YES afterDelay:delyedTime];
+//    [SYProgressHUD showLoadingWindowText:@"LoadingWindow"];
+//    [NSTimer scheduledTimerWithTimeInterval:delyedTime
+//                                     target:self
+//                                   selector:@selector(hideHUD)
+//                                   userInfo:nil
+//                                    repeats:NO];
 }
+
 - (IBAction)customImage:(id)sender {
     
-    [SYHUDView showToView:self.view customImage:[UIImage imageNamed:@"nav_back_icon"] text:@"customImage" hide:2.0];
+    [SYProgressHUD showToCustomImage:[UIImage imageNamed:@"nav_back_icon"] text:@"customImage"];
 
 }
 - (IBAction)labelText:(id)sender {
-    
-    [SYHUDView showToBottomView:self.view text:@"bottom info" hide:2.0];
-    [SYHUDView showToView:self.view text:@"center info" hide:2.0];
+    [SYProgressHUD showToCenterText:@"CenterText"];
+    [SYProgressHUD showToBottomText:@"BottomText"];
 }
 - (IBAction)successImage:(id)sender {
-    [SYHUDView showToView:self.view success:YES text:@"Success" hide:2.0];
     
+    [SYProgressHUD showSuccessText:@"success"];
+//    [SYProgressHUD showFailureText:@"faiure"];
+//    [SYProgressHUD showInfoText:@"info"];
 }
 
 - (void)didReceiveMemoryWarning {

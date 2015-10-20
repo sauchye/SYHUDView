@@ -1,62 +1,55 @@
-### About SYHudView
+### About SYHUDView
 
 Based MBProgrssHUD Package, easy use.
 
-鉴于MBProgrssHUD在项目中的需求，所以基于MBProgrssHUD再次封装，用起来真特么的爽。
+由于MBProgrssHUD在项目中的需求，所以基于MBProgrssHUD再次封装，用起来真特么的爽。
 
 
 
-![intro gif](https://github.com/sauchye/SYHUDView/blob/master/intro.gif)
+![intro gif](https://github.com/sauchye/SYHUDView/raw/master/intro.gif)
 
 
 
-- package MBProgrssHUD(封装MBProgressHUD，更易用)<br/>
+### Base MBProgrssHUD(封装MBProgressHUD，更易用)<br/>
 
-	
+``` objective-c
++ (void)showSuccessText:(NSString *)text;
 
-		+ (SYHUDView *)showToView:(UIView *)view text:(NSString *)text hide:(NSTimeInterval)time;
++ (void)showFailureText:(NSString *)text;
 
-		+ (SYHUDView *)showToBottomView:(UIView *)view text:(NSString *)text hide:(NSTimeInterval)time;
++ (void)showInfoText:(NSString *)text;
 
-		+ (SYHUDView *)showToView:(UIView *)view success:(BOOL)isSuccess  text:(NSString *)text hide:(NSTimeInterval)time;
++ (void)showLoadingWindowText:(NSString *)text;
 
-		+ (SYHUDView *)showToView:(UIView *)view customImage:(UIImage *)image text:(NSString *)text hide:(NSTimeInterval)time;
++ (void)hide;
 
-		
++ (SYProgressHUD *)showToLoadingView:(UIView *)view;
 
-		+ (SYHUDView *)showToView:(UIView *)view;
++ (SYProgressHUD *)showToCenterText:(NSString *)text;
 
-	
++ (SYProgressHUD *)showToBottomText:(NSString *)text;
 
-	Example, easy use:
++ (SYProgressHUD *)showToCustomImage:(UIImage *)image
+                                text:(NSString *)text;
 
-	
+```
 
-	 	
+### Example, easy use:
 
-		[SYHUDView showToView:self.view text:@"Success" hide:2.0];
-
-		[SYHUDView showToView:self.view success:YES text:@"Success" hide:2.0];
-
-		[SYHUDView showToBottomView:self.view text:@"bottom Success" hide:2.0];
-
-		[SYHUDView showToView:self.view customImage:[UIImage imageNamed:@"nav_back_icon"] text:@"customImage" hide:2.0];
-
-		SYHUDView *hud = [SYHUDView showToView:self.view];
-
-		[hud hide:YES afterDelay:2.0]; 
-
-
+``` 
+    [SYProgressHUD showSuccessText:@"success"];
+    
+    [SYProgressHUD showLoadingWindowText:@"LoadingWindow"];
+    
+    [SYProgressHUD showToCenterText:@"CenterText"];
+    [SYProgressHUD showToBottomText:@"BottomText"];
+    
+    [SYProgressHUD showToCustomImage:[UIImage imageNamed:@"nav_back_icon"] text:@"customImage"];
+```
 
 And has many not finished...
 
-
-
 - welcome to star, fork, pull request or issues.
-
-### Support
-
-与MBProgressHUD支持一致吧，毕竟基于它封装。
 
 ### Libraries
 

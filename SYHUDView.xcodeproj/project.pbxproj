@@ -7,16 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		023F85361BD6B24800534FF7 /* hud_error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 023F852F1BD6B24800534FF7 /* hud_error@2x.png */; settings = {ASSET_TAGS = (); }; };
+		023F85371BD6B24800534FF7 /* hud_info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 023F85301BD6B24800534FF7 /* hud_info@2x.png */; settings = {ASSET_TAGS = (); }; };
+		023F85381BD6B24800534FF7 /* hud_success@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 023F85311BD6B24800534FF7 /* hud_success@2x.png */; settings = {ASSET_TAGS = (); }; };
+		023F85391BD6B24800534FF7 /* nav_back_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 023F85321BD6B24800534FF7 /* nav_back_icon@2x.png */; settings = {ASSET_TAGS = (); }; };
+		023F853A1BD6B24800534FF7 /* nav_back_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 023F85331BD6B24800534FF7 /* nav_back_icon@3x.png */; settings = {ASSET_TAGS = (); }; };
+		023F853B1BD6B24800534FF7 /* SYProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 023F85351BD6B24800534FF7 /* SYProgressHUD.m */; settings = {ASSET_TAGS = (); }; };
 		0291DE9A1B8571E300F89982 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0291DE991B8571E300F89982 /* main.m */; };
 		0291DE9D1B8571E300F89982 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0291DE9C1B8571E300F89982 /* AppDelegate.m */; };
 		0291DEA01B8571E300F89982 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0291DE9F1B8571E300F89982 /* ViewController.m */; };
 		0291DEA31B8571E300F89982 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0291DEA11B8571E300F89982 /* Main.storyboard */; };
 		0291DEA51B8571E300F89982 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0291DEA41B8571E300F89982 /* Assets.xcassets */; };
-		0291DECE1B85732800F89982 /* SYHUDView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0291DECD1B85732800F89982 /* SYHUDView.m */; };
-		0291DEDB1B8575CE00F89982 /* hub_error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0291DED21B8575CE00F89982 /* hub_error@2x.png */; };
-		0291DEDD1B8575CE00F89982 /* hub_success@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0291DED41B8575CE00F89982 /* hub_success@2x.png */; };
-		0291DEDE1B8575CE00F89982 /* nav_back_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0291DED61B8575CE00F89982 /* nav_back_icon@2x.png */; };
-		0291DEDF1B8575CE00F89982 /* nav_back_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0291DED71B8575CE00F89982 /* nav_back_icon@3x.png */; };
 		06136B8A16D4473611608254 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C3CD709343EFE468DD8ACE /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		023F852F1BD6B24800534FF7 /* hud_error@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hud_error@2x.png"; sourceTree = "<group>"; };
+		023F85301BD6B24800534FF7 /* hud_info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hud_info@2x.png"; sourceTree = "<group>"; };
+		023F85311BD6B24800534FF7 /* hud_success@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hud_success@2x.png"; sourceTree = "<group>"; };
+		023F85321BD6B24800534FF7 /* nav_back_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_back_icon@2x.png"; sourceTree = "<group>"; };
+		023F85331BD6B24800534FF7 /* nav_back_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_back_icon@3x.png"; sourceTree = "<group>"; };
+		023F85341BD6B24800534FF7 /* SYProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYProgressHUD.h; sourceTree = "<group>"; };
+		023F85351BD6B24800534FF7 /* SYProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYProgressHUD.m; sourceTree = "<group>"; };
 		0291DE951B8571E300F89982 /* SYHUDView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SYHUDView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0291DE991B8571E300F89982 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0291DE9B1B8571E300F89982 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,12 +59,6 @@
 		0291DEB41B8571E400F89982 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0291DEB91B8571E400F89982 /* SYHUDViewUITests.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SYHUDViewUITests.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		0291DEBF1B8571E400F89982 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0291DECC1B85732800F89982 /* SYHUDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYHUDView.h; sourceTree = "<group>"; };
-		0291DECD1B85732800F89982 /* SYHUDView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYHUDView.m; sourceTree = "<group>"; };
-		0291DED21B8575CE00F89982 /* hub_error@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hub_error@2x.png"; sourceTree = "<group>"; };
-		0291DED41B8575CE00F89982 /* hub_success@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hub_success@2x.png"; sourceTree = "<group>"; };
-		0291DED61B8575CE00F89982 /* nav_back_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_back_icon@2x.png"; sourceTree = "<group>"; };
-		0291DED71B8575CE00F89982 /* nav_back_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_back_icon@3x.png"; sourceTree = "<group>"; };
 		92C3CD709343EFE468DD8ACE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FC40AA4D9D7CC81A80F89A8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E3ED7164A415FCBA141C2FD3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -88,6 +90,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		023F852D1BD6B24800534FF7 /* SYProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				023F852E1BD6B24800534FF7 /* Resource */,
+				023F85341BD6B24800534FF7 /* SYProgressHUD.h */,
+				023F85351BD6B24800534FF7 /* SYProgressHUD.m */,
+			);
+			path = SYProgressHUD;
+			sourceTree = "<group>";
+		};
+		023F852E1BD6B24800534FF7 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				023F852F1BD6B24800534FF7 /* hud_error@2x.png */,
+				023F85301BD6B24800534FF7 /* hud_info@2x.png */,
+				023F85311BD6B24800534FF7 /* hud_success@2x.png */,
+				023F85321BD6B24800534FF7 /* nav_back_icon@2x.png */,
+				023F85331BD6B24800534FF7 /* nav_back_icon@3x.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		0291DE8C1B8571E300F89982 = {
 			isa = PBXGroup;
 			children = (
@@ -113,7 +137,7 @@
 		0291DE971B8571E300F89982 /* SYHUDView */ = {
 			isa = PBXGroup;
 			children = (
-				0291DECB1B85732800F89982 /* HUDView */,
+				023F852D1BD6B24800534FF7 /* SYProgressHUD */,
 				0291DE9B1B8571E300F89982 /* AppDelegate.h */,
 				0291DE9C1B8571E300F89982 /* AppDelegate.m */,
 				0291DE9E1B8571E300F89982 /* ViewController.h */,
@@ -148,43 +172,6 @@
 				0291DEBF1B8571E400F89982 /* Info.plist */,
 			);
 			path = SYHUDViewUITests;
-			sourceTree = "<group>";
-		};
-		0291DECB1B85732800F89982 /* HUDView */ = {
-			isa = PBXGroup;
-			children = (
-				0291DECF1B8575CE00F89982 /* Resource */,
-				0291DECC1B85732800F89982 /* SYHUDView.h */,
-				0291DECD1B85732800F89982 /* SYHUDView.m */,
-			);
-			path = HUDView;
-			sourceTree = "<group>";
-		};
-		0291DECF1B8575CE00F89982 /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				0291DED01B8575CE00F89982 /* HudView */,
-				0291DED51B8575CE00F89982 /* nav */,
-			);
-			path = Resource;
-			sourceTree = "<group>";
-		};
-		0291DED01B8575CE00F89982 /* HudView */ = {
-			isa = PBXGroup;
-			children = (
-				0291DED21B8575CE00F89982 /* hub_error@2x.png */,
-				0291DED41B8575CE00F89982 /* hub_success@2x.png */,
-			);
-			path = HudView;
-			sourceTree = "<group>";
-		};
-		0291DED51B8575CE00F89982 /* nav */ = {
-			isa = PBXGroup;
-			children = (
-				0291DED61B8575CE00F89982 /* nav_back_icon@2x.png */,
-				0291DED71B8575CE00F89982 /* nav_back_icon@3x.png */,
-			);
-			path = nav;
 			sourceTree = "<group>";
 		};
 		18B74552F7FF8FEB3A90A8ED /* Pods */ = {
@@ -309,12 +296,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0291DEDF1B8575CE00F89982 /* nav_back_icon@3x.png in Resources */,
+				023F85371BD6B24800534FF7 /* hud_info@2x.png in Resources */,
 				0291DEA51B8571E300F89982 /* Assets.xcassets in Resources */,
-				0291DEDB1B8575CE00F89982 /* hub_error@2x.png in Resources */,
+				023F85381BD6B24800534FF7 /* hud_success@2x.png in Resources */,
+				023F85361BD6B24800534FF7 /* hud_error@2x.png in Resources */,
+				023F85391BD6B24800534FF7 /* nav_back_icon@2x.png in Resources */,
+				023F853A1BD6B24800534FF7 /* nav_back_icon@3x.png in Resources */,
 				0291DEA31B8571E300F89982 /* Main.storyboard in Resources */,
-				0291DEDE1B8575CE00F89982 /* nav_back_icon@2x.png in Resources */,
-				0291DEDD1B8575CE00F89982 /* hub_success@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,9 +360,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				023F853B1BD6B24800534FF7 /* SYProgressHUD.m in Sources */,
 				0291DEA01B8571E300F89982 /* ViewController.m in Sources */,
 				0291DE9D1B8571E300F89982 /* AppDelegate.m in Sources */,
-				0291DECE1B85732800F89982 /* SYHUDView.m in Sources */,
 				0291DE9A1B8571E300F89982 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
