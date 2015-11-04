@@ -44,18 +44,17 @@ static CGFloat const delyedTime = 2.0;
 
 - (IBAction)customImage:(id)sender {
     
-    [SYProgressHUD showToCustomImage:[UIImage imageNamed:@"nav_back_icon"] text:@"customImage"];
+    [SYProgressHUD showToCustomImage:[UIImage imageNamed:@"nav_back_icon"] text:@"This  custom image"];
 
 }
 - (IBAction)labelText:(id)sender {
-    [SYProgressHUD showToCenterText:@"CenterText"];
-    [SYProgressHUD showToBottomText:@"BottomText"];
+    [SYProgressHUD showToCenterText:@"CenterText\nwigeqiegiwuqfeguwfqeu"];
+    [SYProgressHUD showToBottomText:@"BottomText\nskadgiuagdiusafuydfasudfusaydfu"];
 }
 - (IBAction)successImage:(id)sender {
     
     [SYProgressHUD showSuccessText:@"success"];
 //    [SYProgressHUD showFailureText:@"faiure"];
-//    [SYProgressHUD showInfoText:@"info"];
 }
 
 - (void)didReceiveMemoryWarning {

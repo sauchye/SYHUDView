@@ -114,8 +114,8 @@ static CGFloat const margin = 10.0f;
     
     SYProgressHUD *hud = kAllocProgressHUD;
     [kKeyWindows addSubview:hud];
-    hud.labelFont = kHudFont(kHudDetailFontSize);
-    hud.labelText = text;
+    hud.detailsLabelFont = kHudFont(kHudDetailFontSize);
+    hud.detailsLabelText = text;
     hud.mode = MBProgressHUDModeText;
     hud.margin = margin;
     hud.removeFromSuperViewOnHide = YES;
@@ -128,8 +128,8 @@ static CGFloat const margin = 10.0f;
     
     SYProgressHUD *hud = kAllocProgressHUD;
     [kKeyWindows addSubview:hud];
-    hud.labelFont = kHudFont(kHudDetailFontSize);
-    hud.labelText = text;
+    hud.detailsLabelFont = kHudFont(kHudDetailFontSize);
+    hud.detailsLabelText = text;
     hud.mode = MBProgressHUDModeText;
     hud.margin = 10.0f;
     CGFloat bottomSpaceY = 0.0;
