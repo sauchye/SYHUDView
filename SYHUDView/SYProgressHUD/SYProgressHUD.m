@@ -12,14 +12,17 @@
 #define kHudFont(fontSize) [UIFont systemFontOfSize:fontSize]
 #define kAllocProgressHUD [SYProgressHUD showHUDAddedTo:kKeyWindows animated:YES]
 #define Image(imageName) [UIImage imageNamed:imageName]
-#define kHudDetailFontSize 14.0
-#define kHudFontSize 15.0
-#define MIN_WIDTH 100.0f
+#define kAppBlueColor [UIColor orangeColor]
+
+
+
 
 #import "SYProgressHUD.h"
 
-static CGFloat const delyedTime = 1.5;
-static CGFloat const margin = 10.0f;
+static CGFloat const delyedTime = 2.0;
+static CGFloat const MIN_WIDTH  = 120.0f;
+static CGFloat const kHudDetailFontSize  = 14.f;
+static CGFloat const kHudFontSize        = 15.f;
 
 @implementation SYProgressHUD
 
@@ -28,22 +31,21 @@ static CGFloat const margin = 10.0f;
               hide:(NSTimeInterval)time{
     
     SYProgressHUD *hud = kAllocProgressHUD;
-    [hud show:YES];
+    [hud showAnimated:YES];
     hud.animationType = MBProgressHUDAnimationZoom;
-    hud.labelText = text;
-    hud.labelFont = kHudFont(kHudFontSize);
+    hud.detailsLabel.text = text;
+    hud.detailsLabel.font = kHudFont(kHudDetailFontSize);
     [hud setRemoveFromSuperViewOnHide:YES];
     [hud setMinSize:CGSizeMake(MIN_WIDTH, MIN_WIDTH)];
     [kKeyWindows addSubview:hud];
     
     switch (status) {
-            
         case SYProgressHUDStatusSuccess: {
             
             hud.mode = MBProgressHUDModeCustomView;
             UIImageView *successView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"hud_success"]];
             hud.customView = successView;
-            [hud hide:YES afterDelay:time];
+            [hud hideAnimated:YES afterDelay:delyedTime];
         }
             break;
             
@@ -52,16 +54,16 @@ static CGFloat const margin = 10.0f;
             hud.mode = MBProgressHUDModeCustomView;
             UIImageView *errorView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"hud_error"]];
             hud.customView = errorView;
-            [hud hide:YES afterDelay:time];
+            [hud hideAnimated:YES afterDelay:delyedTime];
         }
             break;
-                        
+            
         case SYProgressHUDStatusInfo: {
             
             hud.mode = MBProgressHUDModeCustomView;
             UIImageView *infoView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"hud_info"]];
             hud.customView = infoView;
-            [hud hide:YES afterDelay:time];
+            [hud hideAnimated:YES afterDelay:delyedTime];
         }
             break;
             
@@ -73,6 +75,23 @@ static CGFloat const margin = 10.0f;
         default:
             break;
     }
+}
+
++ (void)showText:(NSString *)text
+            icon:(UIImage *)icon{
+    SYProgressHUD *hud = kAllocProgressHUD;
+    [hud showAnimated:YES];
+    hud.animationType = MBProgressHUDAnimationZoom;
+    hud.detailsLabel.text = text;
+    hud.detailsLabel.font = kHudFont(kHudDetailFontSize);
+    [hud setRemoveFromSuperViewOnHide:YES];
+    [hud setMinSize:CGSizeMake(MIN_WIDTH, MIN_WIDTH)];
+    [kKeyWindows addSubview:hud];
+    
+    hud.mode = MBProgressHUDModeCustomView;
+    UIImageView *successView = [[UIImageView alloc] initWithImage:icon];
+    hud.customView = successView;
+    [hud hideAnimated:YES afterDelay:delyedTime];
 }
 
 + (void)showSuccessText:(NSString *)text{
@@ -104,7 +123,7 @@ static CGFloat const margin = 10.0f;
 + (SYProgressHUD *)showToLoadingView:(UIView *)view{
     SYProgressHUD *hud = [SYProgressHUD showHUDAddedTo:view animated:YES];
     [view addSubview:hud];
-    hud.labelFont = kHudFont(kHudDetailFontSize);
+    hud.label.font = kHudFont(kHudDetailFontSize);
     hud.animationType = MBProgressHUDAnimationZoom;
     hud.mode = MBProgressHUDModeIndeterminate;
     return hud;
@@ -113,25 +132,27 @@ static CGFloat const margin = 10.0f;
 + (SYProgressHUD *)showToCenterText:(NSString *)text{
     
     SYProgressHUD *hud = kAllocProgressHUD;
-    [kKeyWindows addSubview:hud];
-    hud.labelFont = kHudFont(kHudDetailFontSize);
-    hud.labelText = text;
+    hud.detailsLabel.font = kHudFont(kHudDetailFontSize);
+    hud.detailsLabel.text = text;
     hud.mode = MBProgressHUDModeText;
-    hud.margin = margin;
     hud.removeFromSuperViewOnHide = YES;
     hud.animationType = MBProgressHUDAnimationZoom;
-    [hud hide:YES afterDelay:delyedTime];
+    //    [hud setMinSize:CGSizeMake(MIN_WIDTH, 30)];
+    [kKeyWindows addSubview:hud];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [hud hideAnimated:YES afterDelay:delyedTime];
+    });
+    
     return hud;
 }
 
 + (SYProgressHUD *)showToBottomText:(NSString *)text{
     
     SYProgressHUD *hud = kAllocProgressHUD;
-    [kKeyWindows addSubview:hud];
-    hud.labelFont = kHudFont(kHudDetailFontSize);
-    hud.labelText = text;
+    hud.detailsLabel.font = kHudFont(kHudDetailFontSize);
+    hud.detailsLabel.text = text;
     hud.mode = MBProgressHUDModeText;
-    hud.margin = 10.0f;
+    //    hud.margin = 10.0f;
     CGFloat bottomSpaceY = 0.0;
     if (kCURRENT_SCREEN_HEIGHT == 480) {
         bottomSpaceY = 150.0f;
@@ -140,10 +161,32 @@ static CGFloat const margin = 10.0f;
     }else{
         bottomSpaceY = 200.0f;
     }
-    hud.yOffset = bottomSpaceY;
+    //hud.offset.y = bottomSpaceY;
     hud.removeFromSuperViewOnHide = YES;
     hud.animationType = MBProgressHUDAnimationFade;
-    [hud hide:YES afterDelay:delyedTime];
+    
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        [kKeyWindows addSubview:hud];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [hud hideAnimated:YES afterDelay:delyedTime];
+        });
+    });
+    return hud;
+}
+
++ (SYProgressHUD *)showToBottom30Text:(NSString *)text{
+    
+    SYProgressHUD *hud = [self showToBottomText:text];
+    
+    CGFloat bottomSpaceY = 0.0;
+    if (kCURRENT_SCREEN_HEIGHT == 480) {
+        bottomSpaceY = 150.0f + 65;
+    }else if(kCURRENT_SCREEN_HEIGHT == 568){
+        bottomSpaceY = 180.0f + 75;
+    }else{
+        bottomSpaceY = 200.0f + 115;
+    }
+    //hud.offset.y = bottomSpaceY;
     return hud;
 }
 
@@ -155,16 +198,76 @@ static CGFloat const margin = 10.0f;
     hud.mode = MBProgressHUDModeCustomView;
     hud.animationType = MBProgressHUDAnimationZoom;
     hud.customView = [[UIImageView alloc] initWithImage:image];
-    hud.labelFont = kHudFont(kHudFontSize);
-    hud.labelText = text;
-    [hud hide:YES afterDelay:delyedTime];
-    [hud showAnimated:YES whileExecutingBlock:^{
-        sleep(delyedTime);
-    } completionBlock:^{
+    hud.label.font = kHudFont(kHudFontSize);
+    hud.label.text = text;
+    [hud hideAnimated:YES afterDelay:1];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delyedTime * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [hud removeFromSuperview];
-    }];
+    });
+    //    [hud showAnimated:YES whileExecutingBlock:^{
+    //        sleep(delyedTime);
+    //    } completionBlock:^{
+    //        [hud removeFromSuperview];
+    //    }];
     
     return hud;
+}
+
+@end
+
+#pragma mark - SYStatusBarNotification
+@implementation SYStatusBarNotification
+
+
++ (SYStatusBarNotification *)showNotificationStyle:(CWNotificationStyle)notificationStyle
+                               textBackgroundColor:(UIColor *)textBackgroundColor
+                                          fontSize:(CGFloat)fontSize
+                                              text:(NSString *)text
+                                              hide:(NSTimeInterval)time{
+    
+    SYStatusBarNotification *navNotification = [SYStatusBarNotification new];
+    navNotification.notificationStyle = notificationStyle;
+    navNotification.notificationLabelFont = [UIFont systemFontOfSize:fontSize];
+    navNotification.notificationLabelBackgroundColor = textBackgroundColor;
+    [navNotification displayNotificationWithMessage:text forDuration:time];
+    
+    return navNotification;
+}
+
++ (void)showStatusBarNotificationText:(NSString *)text
+                  textBackgroundColor:(UIColor *)textBackgroundColor
+                             fontSize:(CGFloat)fontSize{
+    
+    [self showNotificationStyle:CWNotificationStyleStatusBarNotification
+            textBackgroundColor:textBackgroundColor
+                       fontSize:fontSize
+                           text:text
+                           hide:delyedTime];
+}
+
++ (void)showNavigationBarNotificationText:(NSString *)text
+                      textBackgroundColor:(UIColor *)textBackgroundColor
+                                 fontSize:(CGFloat)fontSize{
+    
+    [self showNotificationStyle:CWNotificationStyleNavigationBarNotification
+            textBackgroundColor:textBackgroundColor
+                       fontSize:kHudFontSize
+                           text:text
+                           hide:delyedTime];
+}
+
++ (void)showStatusBarNotificationText:(NSString *)text{
+    [self showStatusBarNotificationText:text
+                    textBackgroundColor:kAppBlueColor
+                               fontSize:kHudFontSize];
+}
+
+
++ (void)showNavigationBarNotificationText:(NSString *)text{
+    
+    [self showNavigationBarNotificationText:text
+                        textBackgroundColor:kAppBlueColor
+                                   fontSize:kHudFontSize];
 }
 
 

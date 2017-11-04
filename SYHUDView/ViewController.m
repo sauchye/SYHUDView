@@ -34,6 +34,7 @@ static CGFloat const delyedTime = 2.0;
     
     SYProgressHUD *hud =  [SYProgressHUD showToLoadingView:self.view];
     [hud hide:YES afterDelay:delyedTime];
+    hud.bezelView.backgroundColor = [[UIColor orangeColor]colorWithAlphaComponent:0.8];
 //    [SYProgressHUD showLoadingWindowText:@"LoadingWindow"];
 //    [NSTimer scheduledTimerWithTimeInterval:delyedTime
 //                                     target:self

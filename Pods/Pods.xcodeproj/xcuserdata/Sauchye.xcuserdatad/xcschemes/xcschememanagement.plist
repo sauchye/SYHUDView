@@ -9,7 +9,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods.xcscheme</key>
+		<key>Pods-SYHUDView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>07BB0592666BC97BA4E7B78B74C02F7E</key>
+		<key>247FDDEED0A5DB0FDCA6B63A53B33A84</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>96B2763E2725AB370355E817AAEC6085</key>
+		<key>DBA6001481CEA0EBA031CC5C94508FAA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

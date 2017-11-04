@@ -7,6 +7,8 @@
 //
 
 #import "MBProgressHUD.h"
+#import "CWStatusBarNotification.h"
+
 
 typedef NS_ENUM(NSInteger, SYProgressHUDStatus) {
     
@@ -16,12 +18,17 @@ typedef NS_ENUM(NSInteger, SYProgressHUDStatus) {
     SYProgressHUDStatusLoading
 };
 
+
 @interface SYProgressHUD : MBProgressHUD
+
 
 + (void)showStatus:(SYProgressHUDStatus)status
               text:(NSString *)text
               hide:(NSTimeInterval)time;
 
+/**  icon and text */
++ (void)showText:(NSString *)text
+            icon:(UIImage *)icon;
 /** success icon and text */
 + (void)showSuccessText:(NSString *)text;
 
@@ -47,9 +54,30 @@ typedef NS_ENUM(NSInteger, SYProgressHUDStatus) {
 /** show bottom text */
 + (SYProgressHUD *)showToBottomText:(NSString *)text;
 
++ (SYProgressHUD *)showToBottom30Text:(NSString *)text;
+
 /** setting customImage and text */
 + (SYProgressHUD *)showToCustomImage:(UIImage *)image
                                 text:(NSString *)text;
+
+
+@end
+
+#pragma mark - SYStatusBarNotification
+@interface SYStatusBarNotification : CWStatusBarNotification
+
++ (void)showStatusBarNotificationText:(NSString *)text
+                  textBackgroundColor:(UIColor *)textBackgroundColor                                                      fontSize:(CGFloat)fontSize;
+
++ (void)showNavigationBarNotificationText:(NSString *)text
+                      textBackgroundColor:(UIColor *)textBackgroundColor
+                                 fontSize:(CGFloat)fontSize;
+
+/** showStatusBarNotificationText */
++ (void)showStatusBarNotificationText:(NSString *)text;
+
+/** showNavigationBarNotificationText  */
++ (void)showNavigationBarNotificationText:(NSString *)text;
 
 
 
