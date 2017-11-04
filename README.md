@@ -1,16 +1,12 @@
 ### About SYHUDView
 
-Based MBProgrssHUD Package, easy use.
-
-由于MBProgrssHUD在项目中的需求，所以基于MBProgrssHUD再次封装，用起来真特么的爽。
-
 
 
 ![intro gif](https://github.com/sauchye/SYHUDView/raw/master/intro.gif)
 
 
 
-### Base MBProgrssHUD(封装MBProgressHUD，更易用)<br/>
+
 
 ``` objective-c
 + (void)showSuccessText:(NSString *)text;
@@ -32,25 +28,28 @@ Based MBProgrssHUD Package, easy use.
 + (SYProgressHUD *)showToCustomImage:(UIImage *)image
                                 text:(NSString *)text;
 
++ (void)showStatusBarNotificationText:(NSString *)text;
+
++ (void)showNavigationBarNotificationText:(NSString *)text;
+
+
 ```
 
 ### Example, easy use:
 
 ``` 
     [SYProgressHUD showSuccessText:@"success"];
-    
+
     [SYProgressHUD showLoadingWindowText:@"LoadingWindow"];
-    
+
     [SYProgressHUD showToCenterText:@"CenterText"];
     [SYProgressHUD showToBottomText:@"BottomText"];
-    
+
     [SYProgressHUD showToCustomImage:[UIImage imageNamed:@"nav_back_icon"] text:@"customImage"];
 ```
-
-And has many not finished...
-
-- welcome to star, fork, pull request or issues.
 
 ### Libraries
 
 <a href="https://github.com/jdg/MBProgressHUD">MBProgressHUD</a>
+
+<a href="https://github.com/cezarywojcik/CWStatusBarNotification">CWStatusBarNotification</a>
