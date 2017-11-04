@@ -41,8 +41,8 @@
 }
 
 - (IBAction)labelText:(id)sender {
-    [SYProgressHUD showToCenterText:@"CenterText"];
-    [SYProgressHUD showToBottomText:@"BottomText"];
+    [SYProgressHUD showToCenterText:@"CenterText\nwigeqiegiwuqfeguwfqeu"];
+//    [SYProgressHUD showToBottomText:@"BottomText\nskadgiuagdiusafuydfasudfusaydfu"];
 }
 
 - (IBAction)successImage:(id)sender {

@@ -6,6 +6,9 @@
 //  Copyright © 2015 sauchye.com. All rights reserved.
 //
 
+//
+
+
 #define kCURRENT_SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
 #define kCURRENT_SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
 #define kKeyWindows [UIApplication sharedApplication].keyWindow
@@ -270,6 +273,6 @@ static CGFloat const kHudFontSize        = 15.f;
                                    fontSize:kHudFontSize];
 }
 
-
-
 @end
+
+
