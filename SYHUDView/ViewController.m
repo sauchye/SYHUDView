@@ -9,7 +9,6 @@
 #import "ViewController.h"
 #import "SYProgressHUD.h"
 
-static CGFloat const delyedTime = 2.0;
 
 
 @interface ViewController ()
@@ -33,35 +32,30 @@ static CGFloat const delyedTime = 2.0;
 
     
     SYProgressHUD *hud =  [SYProgressHUD showToLoadingView:self.view];
-    [hud hide:YES afterDelay:delyedTime];
-    hud.bezelView.backgroundColor = [[UIColor orangeColor]colorWithAlphaComponent:0.8];
-//    [SYProgressHUD showLoadingWindowText:@"LoadingWindow"];
-//    [NSTimer scheduledTimerWithTimeInterval:delyedTime
-//                                     target:self
-//                                   selector:@selector(hideHUD)
-//                                   userInfo:nil
-//                                    repeats:NO];
+    [hud hideAnimated:YES afterDelay:2.f];
+    //hud.bezelView.backgroundColor = [UIColor blackColor];
 }
 
 - (IBAction)customImage:(id)sender {
-    
     [SYProgressHUD showToCustomImage:[UIImage imageNamed:@"nav_back_icon"] text:@"customImage"];
-
 }
+
 - (IBAction)labelText:(id)sender {
     [SYProgressHUD showToCenterText:@"CenterText"];
     [SYProgressHUD showToBottomText:@"BottomText"];
 }
+
 - (IBAction)successImage:(id)sender {
-    
     [SYProgressHUD showSuccessText:@"success"];
-//    [SYProgressHUD showFailureText:@"faiure"];
-//    [SYProgressHUD showInfoText:@"info"];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)navigationTextTips:(id)sender {
+    [SYStatusBarNotification showNavigationBarNotificationText:@"nav tt test"];
 }
+
+- (IBAction)statusBarTextTips:(id)sender {
+    [SYStatusBarNotification showStatusBarNotificationText:@"tt test"];
+}
+
 
 @end
