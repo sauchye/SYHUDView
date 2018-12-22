@@ -16,6 +16,12 @@
 #define kAllocProgressHUD [SYProgressHUD showHUDAddedTo:kKeyWindows animated:YES]
 #define Image(imageName) [UIImage imageNamed:imageName]
 #define kAppBlueColor [UIColor orangeColor]
+#define isiPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+//判断iPhoneXR
+#define isiPhoneXR ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(828, 1792), [[UIScreen mainScreen] currentMode].size) : NO)
+//判断iPhoneXs Max
+#define isiPhoneXS_MAX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2688), [[UIScreen mainScreen] currentMode].size): NO)
+#define isiPhoneXAll (isiPhoneX || isiPhoneXR || isiPhoneXS_MAX)
 
 
 
@@ -229,11 +235,21 @@ static CGFloat const kHudFontSize        = 15.f;
                                               hide:(NSTimeInterval)time{
     
     SYStatusBarNotification *navNotification = [SYStatusBarNotification new];
-    navNotification.notificationStyle = notificationStyle;
-    navNotification.notificationLabelFont = [UIFont systemFontOfSize:fontSize];
-    navNotification.notificationLabelBackgroundColor = textBackgroundColor;
+    [navNotification setNotificationLabelFont:[UIFont systemFontOfSize:fontSize]];
+    [navNotification setNotificationLabelBackgroundColor:textBackgroundColor];
+    if (@available(iOS 11.0, *)){
+        if (!UIEdgeInsetsEqualToEdgeInsets([[[UIApplication sharedApplication] keyWindow] safeAreaInsets], UIEdgeInsetsZero)){
+            if (isiPhoneXAll) {
+                [navNotification setNotificationStyle:CWNotificationStyleNavigationBarNotification];
+            }else{
+                [navNotification setNotificationStyle:notificationStyle];
+            }
+        }
+    }else{
+        [navNotification setNotificationStyle:notificationStyle];
+    }
     [navNotification displayNotificationWithMessage:text forDuration:time];
-    
+
     return navNotification;
 }
 

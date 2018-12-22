@@ -203,7 +203,6 @@
 				0291DE921B8571E300F89982 /* Frameworks */,
 				0291DE931B8571E300F89982 /* Resources */,
 				12110D39D29370D7800E64C8 /* [CP] Embed Pods Frameworks */,
-				9A06D5582D5B31341C3B016F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -342,21 +341,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SYHUDView/Pods-SYHUDView-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9A06D5582D5B31341C3B016F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SYHUDView/Pods-SYHUDView-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E30BC522E22F4E8482448EE1 /* [CP] Check Pods Manifest.lock */ = {
